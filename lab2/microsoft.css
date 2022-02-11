@@ -1,0 +1,119 @@
+body {
+    font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    width: min(90vw, 1193px);
+    /* width: 1193px; */
+    margin: 8px auto;
+}
+
+header, 
+.flex-container {
+    padding: 7px 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header .logo {
+    margin-right: 7px;
+    float: left;
+    width: 108px;
+}
+
+header a {
+    margin-right: 15px;
+    font-size: 13px;
+}
+
+header .search {
+    width: 20px;
+    float: right;
+    margin: 0 10px;
+}
+
+header .login {
+    width: 30px;
+    float: right;
+    margin: 0 10px;
+}
+
+.flex-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.big-container,
+.small-container {
+    margin-bottom: 30px;
+}
+
+.big-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e6e6e6;
+    flex-basis: 100%;
+    padding-left: 80px;
+}
+
+.big-container h1 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.big-container p {
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+a.button {
+    display: inline-block;
+    padding: 8px 25px;
+    font-weight: 500;
+}
+
+a.button.black {
+    color: white;
+    background-color: black;
+}
+
+.small-container {
+    flex-basis: 20%;
+    flex-shrink: 1;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.small-container h3 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.small-container p {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+
+a.button.in-text {
+    padding: 0;
+    color: #007ace;
+
+}
