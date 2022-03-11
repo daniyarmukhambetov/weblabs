@@ -1,0 +1,7 @@
+<p>product-category works!</p>
+
+<div *ngFor="let category of this.categories">
+    <div>{{category}}</div>
+    <button (click)="show_products(category)">Show</button>
+    <app-product-list *ngIf="this.state.get(category)" [category]="category" [category]="category"></app-product-list>
+</div>

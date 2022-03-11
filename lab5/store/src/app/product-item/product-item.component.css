@@ -1,0 +1,24 @@
+.flex {
+    display: flex;
+}
+.pics {
+    /* display: flex; */
+    width: 30%;
+    margin-right: 5%;
+}
+img {
+    width: 100%;
+}
+.info {
+    width: 70%;
+}
+.name {
+    /* width: 50%; */
+    margin: 5% 5% 5% 5%;}
+.description {
+    /* width: 50%; */
+    margin: 5% 5% 5% 5%;
+}
+.rating {
+    margin: 5% 5% 5% 5%;
+}
