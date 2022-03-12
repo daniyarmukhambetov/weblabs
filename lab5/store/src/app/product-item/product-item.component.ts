@@ -189,7 +189,7 @@ export class ProductItemComponent implements OnInit {
     // }
     if (this.descriptions.length > 1)
       this.descriptions.pop();
-    console.log(this.descriptions);
+    // console.log(this.descriptions);
     
   }
   prev(id : Number) {

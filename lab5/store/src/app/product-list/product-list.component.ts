@@ -25,14 +25,17 @@ export class ProductListComponent implements OnInit {
     // console.log("onInit");
     // console.log(this.category);
     this.getProducts();
+    console.log(this.products);
+    
   }
   getProducts():void {
     this.products = this.service.get_products(this.category);
   }
   show(id : Number) : void {
     // this.state.
-    // console.log(this.category);
-    var s = this.state.get(id); 
+    console.log(this.category);
+    var s = this.state.get(id);
+    console.log(id); 
     // console.log(s)
     if (s == true) {
       let btn = document.getElementById(`${id}`)?.getElementsByClassName("details-button")[0];
