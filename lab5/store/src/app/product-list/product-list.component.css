@@ -1,6 +1,12 @@
 h2 {
     text-align: center;
 }
+.flex-container2 {
+    width: 100%;
+    display: row;
+    flex-direction: column;
+    /* background-color: aqua; */
+}
 .flex-container {
     width: 50%;
     margin-left: 25%;
@@ -49,4 +55,13 @@ h2 {
     border-radius: 1%;
     color: white;
     font-weight: bold;
+}
+img {
+    width: 5%;
+}
+.cart {
+    width: 25%;
+    background-color: beige;
+    margin-left: 75%;
+
 }

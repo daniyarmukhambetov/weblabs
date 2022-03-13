@@ -10,6 +10,7 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { ProductItemComponent } from './product-item/product-item.component';
 import { ProductCategoryComponent } from './product-category/product-category.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ProductCategoryComponent } from './product-category/product-category.co
     ProductListComponent,
     TopBarComponent,
     ProductItemComponent,
-    ProductCategoryComponent
+    ProductCategoryComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

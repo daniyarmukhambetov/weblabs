@@ -6,6 +6,11 @@
     width: 30%;
     margin-right: 5%;
 }
+#cart {
+    width: 5%;
+    height: auto;
+    margin-left: 90%;
+}
 img {
     width: 100%;
 }

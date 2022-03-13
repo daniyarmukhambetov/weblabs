@@ -2,7 +2,7 @@
 
 <div class="flex-container">
     <!-- <div *ngFor="let product of products"> -->
-    <div *ngFor="let product of products" class="prod" [id]="product.id">
+    <div *ngFor="let product of products;" class="prod" [id]="product.id">
         <div>
             {{ product.name }}
         </div>
@@ -15,8 +15,10 @@
         <div>
             <button class="details-button" (click)="show(product.id)">Show details</button>
         </div>
+        <!-- <div> -->
+        <!-- </div> -->
         <div class="details" *ngIf="this.state.get(product.id)">
-            <app-product-item [idd]="product.id">
+            <app-product-item [idd]="product.id" (ev)="add($event)">
             </app-product-item>
         </div>
     </div>

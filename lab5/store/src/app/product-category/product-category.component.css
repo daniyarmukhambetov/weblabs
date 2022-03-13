@@ -1,0 +1,8 @@
+.cart {
+    margin-top: 10%;
+    background-color: azure;
+}
+.flex {
+    width: 100%;
+    display: flex;
+}

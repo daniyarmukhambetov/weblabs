@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Product } from '../product';
 import { ProductListService } from '../product-list.service';
 // import {PRODUCTS} from '../product-list.service'
@@ -11,8 +11,12 @@ import { ProductListService } from '../product-list.service';
 })
 export class ProductListComponent implements OnInit {
   products : Product[] = [];
-  state = new Map<Number, boolean>(); 
+  state = new Map<Number, boolean>();
+  cart : Product[] = [];
+  ZERO : Number = 0; 
+  cart_sum = 0;
   @Input() category !: String;
+  @Output() ev = new EventEmitter();
   constructor(private service : ProductListService) {
     // this.getProducts();
     // console.log(this.category);
@@ -48,12 +52,25 @@ export class ProductListComponent implements OnInit {
     } else {
       let btn = document.getElementById(`${id}`)?.getElementsByClassName("details-button")[0];
       // console.log(btn);
+      // this.cart.indexOf()
       if (btn) {
           btn.innerHTML = "Hide details";
           // console.log(btn);
         }
       this.state.set(id, true);
     }
+  }
+  delete(ind : number) : void {
+    this.cart.splice(ind, 1);
+    this.cart_sum -= 50;
+  }
+  add(prod : any) : void {
+    console.log(prod);
+    this.cart.push(prod);
+    this.cart_sum += 50;
+    // give() {
+    this.ev.emit(prod);
+    // }
   }
   share() {
     window.alert('The product has been shared!');

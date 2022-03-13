@@ -1,7 +1,16 @@
 <p>product-category works!</p>
-
 <div *ngFor="let category of this.categories">
     <div>{{category}}</div>
     <button (click)="show_products(category)">Show</button>
-    <app-product-list *ngIf="this.state.get(category)" [category]="category" [category]="category"></app-product-list>
+    <app-product-list *ngIf="this.state.get(category)" [category]="category" [category]="category" (ev)="add($event)"></app-product-list>
 </div>
+<div class="cart">
+    <h4>Cart</h4>
+    <div class="flex" *ngFor="let prod of cart">
+        <div>{{prod.name}}</div>
+        <button (click)="delete(this.cart.indexOf(prod))">delete</button>
+    </div>
+    Total Price:
+    {{this.sum}}
+</div>
+

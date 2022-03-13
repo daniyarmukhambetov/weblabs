@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { ProductItemService } from '../product-item.service';
 import { Product } from '../product';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
@@ -176,6 +176,8 @@ PC VR Compatible - Step into incredible Oculus Rift titles by connecting an Ocul
 export class ProductItemComponent implements OnInit {
   // idd : Number = 0;
   @Input() idd !: Number;
+  @Output() ev = new EventEmitter();
+  // @Output() ev = new EventEmitter<{prod : Product}>();
   product : any;
   img_num = 0;
   descriptions = []
@@ -191,6 +193,9 @@ export class ProductItemComponent implements OnInit {
       this.descriptions.pop();
     // console.log(this.descriptions);
     
+  }
+  add () : void {
+    this.ev.emit(this.product);
   }
   prev(id : Number) {
     let img = document.getElementById(`${id}_img`);
