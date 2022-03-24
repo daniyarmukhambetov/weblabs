@@ -1,0 +1,5 @@
+<p>albums works!</p>
+<div *ngFor="let album of albums" [id]="album.id">
+    <a href="albums/{{this.album.id}}">{{album.title}}</a>
+    <button (click)="delete(album)">Delete this Album</button>
+</div>

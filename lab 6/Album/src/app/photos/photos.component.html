@@ -1,0 +1,11 @@
+<p>photos works!</p>
+<button (click)="return_back()">Back</button>
+<div *ngFor="let photo of photos">
+    <div>
+        {{photo.title}}
+    </div>
+    <div class="flex-container">
+        <img [src]="photo.url" alt="photo">
+        <img [src]="photo.thumbnailUrl" alt="photo">
+    </div>
+</div>

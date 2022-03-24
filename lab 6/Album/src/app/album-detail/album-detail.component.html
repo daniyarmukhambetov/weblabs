@@ -1,0 +1,10 @@
+<div>
+    <input [(ngModel)]="this.album.title" placeholder="You can change title!">
+    <button (click)="save()">Save</button>
+</div>
+<div>
+    {{album.title}}
+</div>
+<button (click)="return_back()">Back</button>
+<br>
+<a routerLink="/albums/{{album.id}}/photos">Photos</a>
