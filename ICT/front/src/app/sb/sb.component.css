@@ -1,0 +1,9 @@
+.flex {
+  display: flex;
+  flex-direction: column;
+}
+div {
+  /*height: 10%;*/
+  background-color: aqua;
+  color: aqua;
+}
